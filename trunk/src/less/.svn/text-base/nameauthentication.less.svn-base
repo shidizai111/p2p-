@@ -1,0 +1,47 @@
+// 公共样式
+/* 浮动样式 */
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+/* 清除浮动 */
+.clear{
+    clear:both;
+}
+/* 清除固定结构浮动 */
+.clearfix::after{
+    content:"";
+    width:0;
+    height:0;
+    display:block;
+    clear:both;
+}
+#borrowobjcet{
+    .personalr{
+            .panel-body{
+                padding:0px;
+                .table{
+                    thead{
+                        tr{
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+                    }
+                    tr{
+                        span{
+                            display:inline;
+                            // width: 40px;
+                            // height: 40px;
+                            background-color: #337ab7;
+                            color:#fff;
+                            font-size: 12px;
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+    }
+
+}

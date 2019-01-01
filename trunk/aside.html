@@ -1,0 +1,89 @@
+<div class="panel-group col-sm-3" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#myAcount">
+                我的账户
+            </a>
+        </h4>
+        </div>
+        <div id="myAcount" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body list-group">
+                <a href="./personal.php#3" class="list-group-item active">账户信息</a>
+                <a href="./personaldata.php#13" class="list-group-item">个人资料</a>
+                <a href="./personal-realAuth.php#4" class="list-group-item">实名认证</a>
+                <a href="#5" class="list-group-item">银行卡管理</a>
+                <a href="./borrowproject.php#6" class="list-group-item">登记记录</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#borrow">
+                借款项目
+            </a>
+        </h4>
+        </div>
+        <div id="borrow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body list-group">
+            <a href="borrow_apply.php#7" class="list-group-item">申请借款</a>
+            <a href="./nameauthentication.php#8" class="list-group-item">借款项目</a>
+            <a href="./borrowlist.php#9" class="list-group-item">还款明细</a>
+        </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#property" aria-expanded="false" aria-controls="collapseThree">
+                资产详情
+            </a>
+        </h4>
+        </div>
+        <div id="property" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body list-group">
+                <a href="./accountwater.php#1" class="list-group-item">账户流水</a>
+                <a href="./detailup.php#2" class="list-group-item">充值明细</a>
+                <a href="./withdraw.php#14" class="list-group-item">提现记录</a>
+                <a href="#10" class="list-group-item">收款明细</a>
+                <a href="./accountup.php#13" class="list-group-item">账户提现</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#charts" aria-expanded="false" aria-controls="collapseThree">
+                图表统计
+            </a>
+        </h4>
+        </div>
+        <div id="charts" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body list-group">
+                <a href="./charBar.php#11" class="list-group-item">柱状图统计</a>
+                <a href="./chartCircle.php#12" class="list-group-item">饼形图统计</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const index = location.hash;
+    const panelList = $('.panel-collapse');
+    $.each(panelList, (index, item)=>{
+        // 清除激活样式
+        $(item).children().children().removeClass('active');
+        // 先全部收起
+        $(item).removeClass('in');
+    })
+    // 展开对应
+    const curLink = $(`#accordion a[href$=${index}]`);
+    curLink.parent().parent().addClass('in');
+    // 激活对应
+    curLink.addClass('active')
+</script>
+
+
+

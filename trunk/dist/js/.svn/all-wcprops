@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/p2p/!svn/ver/3/trunk/dist/js
+END
+register.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/p2p/!svn/ver/7/trunk/dist/js/register.min.js
+END
+personal-realAuth.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/p2p/!svn/ver/7/trunk/dist/js/personal-realAuth.min.js
+END
+header.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/p2p/!svn/ver/6/trunk/dist/js/header.min.js
+END
+login.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/p2p/!svn/ver/7/trunk/dist/js/login.min.js
+END
+personaldata.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/p2p/!svn/ver/7/trunk/dist/js/personaldata.min.js
+END
+personalbank.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/p2p/!svn/ver/7/trunk/dist/js/personalbank.min.js
+END
+borrow_apply.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/p2p/!svn/ver/7/trunk/dist/js/borrow_apply.min.js
+END
+nameauthentication.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/p2p/!svn/ver/7/trunk/dist/js/nameauthentication.min.js
+END
+userinfoedit.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/p2p/!svn/ver/7/trunk/dist/js/userinfoedit.min.js
+END
+accountup.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/p2p/!svn/ver/6/trunk/dist/js/accountup.min.js
+END

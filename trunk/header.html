@@ -1,0 +1,74 @@
+<!-- 顶部导航 -->
+<header>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-phone-alt"></span><i>028-86261949</i></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id='box'><a href="./">首页</a></li>
+
+                    <li><a href="#"><i class="fas fa-question-circle"></i></span>帮助</a></li>
+                    <li><a href="#" id="qrcode" data-html="true" data-toggle="tooltip" data-placement="bottom" title='<img src="./assets/images/contract.png" alt="">'><span
+                    class="fab fa-weixin"></span>联系客服</a></li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- 主导航 -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="./assets/images/logo.png"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./index.php"><span class=""></span>首页</a></li>
+                    <li><a href="./invest.php">我要投资</a></li>
+                    <li><a href="./borrow.php">我要借款</a></li>
+                    <li><a href="./personal.php#3">个人中心</a></li>
+                    <li><a href="#">新手指引</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+<script>
+        // 发送请求到后台
+        $.get("./API/headerlogin.php",function(data){
+            let $nav;
+        if(data.isExist){
+
+        $nav=`<li><a href="personal.php"><span class="fas fa-user-circle"> </span>${data.username}</a></li>  
+                <li><a href="./personalbank.php"><span class="fas fa-yen-sign"> </span> 赶快充值</a></li>
+                <li><a href="./API/singout.php"><span class="fas fa-sign-out-alt"> </span> 注销</a></li>`;
+        }else{
+        $nav=` <li><a href="register.php"><i class="fas fa-user-plus"></i>注册</a></li>
+                <li><a href="login.php"><i class="fas fa-sign-in-alt"></i>登录</a></li>`;
+        };
+        $('#box').after($nav);
+    },'json');
+</script>

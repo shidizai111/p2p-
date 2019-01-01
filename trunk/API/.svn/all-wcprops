@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/p2p/!svn/ver/7/trunk/API
+END
+getUserInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/p2p/!svn/ver/7/trunk/API/getUserInfo.php
+END
+getChartData.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/p2p/!svn/ver/7/trunk/API/getChartData.php
+END
+user.php
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/p2p/!svn/ver/7/trunk/API/user.php
+END
+getBorrowByUserid.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/p2p/!svn/ver/7/trunk/API/getBorrowByUserid.php
+END
+headerlogin.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/p2p/!svn/ver/7/trunk/API/headerlogin.php
+END
+personalCheck.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/p2p/!svn/ver/7/trunk/API/personalCheck.php
+END
+borrowadd.php
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/p2p/!svn/ver/7/trunk/API/borrowadd.php
+END
+userEdit.php
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/p2p/!svn/ver/7/trunk/API/userEdit.php
+END
+userlogin.php
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/p2p/!svn/ver/7/trunk/API/userlogin.php
+END
+getPagerData.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/p2p/!svn/ver/7/trunk/API/getPagerData.php
+END
+singout.php
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/p2p/!svn/ver/7/trunk/API/singout.php
+END

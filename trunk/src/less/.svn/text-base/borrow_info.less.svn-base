@@ -1,0 +1,42 @@
+#borrowdata{
+    .panel-default{
+        padding:0px;
+        .panel-body{
+            img{
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+                display: block;
+            }
+            span{
+                color:green;
+            }
+        }
+    }
+    // 中间部分
+    h3{
+        color:#337ab7;
+        span{
+            // display:block;
+            background-color: #337ab7;
+            padding:5px;
+            color:#fff;
+            font-size: 14px;
+            border-radius: 3px;
+        }
+    }
+    .table{
+        // border-collapse:collapse;
+        border:0px;
+        tbody{
+            font-size:20px;
+            tr{
+                border:0px;
+                color:#999;
+                td{
+                    border:0px;
+                }
+            }
+        }
+    }
+}

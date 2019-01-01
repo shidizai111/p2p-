@@ -1,0 +1,110 @@
+#borrow{
+    margin-top:30px;
+    margin-bottom: 30px;
+    .panel-primary{
+        padding-right:15px;
+        border: 0px;
+        .panel-heading{
+            background-color: #40d47e;
+            h3{
+                font-size: 24px;
+                line-height:20px;
+            }
+        }
+        .panel-body{
+            background-color: #f9f9f9;
+            .list{
+                li{
+                    background:url(../../assets/images/sequare.png) no-repeat;
+                    list-style: none;
+                    color:#555;
+                    padding-left:20px;
+                    font-size: 14px;
+                    margin-top:5px;
+
+                }
+            }
+                .btn{
+                    width: 80px;
+                    height: 30px;
+                    background-color: #00a8ff;
+                    border-radius:20px;
+                    text-align: center;
+                    margin-left: 140px;
+    
+                }
+        }
+    }
+
+    .panel-success{
+        padding-right:15px;
+        border: 0px;
+        .panel-heading{
+            background-color: #ec7e20;
+            h3{
+                font-size: 24px;
+                line-height:20px;
+                color: #f9f9f9;
+            }
+        }
+        .panel-body{
+            background-color: #f9f9f9;
+            .list{
+                li{
+                    background:url(../../assets/images/sequare.png) no-repeat;
+                    list-style: none;
+                    color:#555;
+                    padding-left:20px;
+                    font-size: 14px;
+                    margin-top:5px;
+
+                }
+            }
+                .btn{
+                    width: 80px;
+                    height: 30px;
+                    background-color: #00a8ff;
+                    border-radius:20px;
+                    text-align: center;
+                    margin-left: 140px;
+    
+                }
+        }
+    }
+
+    .panel-info{
+        padding-right:15px;
+        border: 0px;
+        .panel-heading{
+            background-color: #2ca2ee;
+            h3{
+                font-size: 24px;
+                line-height:20px;
+                color: #f9f9f9;
+            }
+        }
+        .panel-body{
+            background-color: #f9f9f9;
+            .list{
+                li{
+                    background:url(../../assets/images/sequare.png) no-repeat;
+                    list-style: none;
+                    color:#555;
+                    padding-left:20px;
+                    font-size: 14px;
+                    margin-top:5px;
+
+                }
+            }
+                .btn{
+                    width: 80px;
+                    height: 30px;
+                    background-color: #00a8ff;
+                    border-radius:20px;
+                    text-align: center;
+                    margin-left: 140px;
+    
+                }
+        }
+    }
+}

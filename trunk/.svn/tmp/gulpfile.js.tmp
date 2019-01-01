@@ -1,0 +1,245 @@
+<<<<<<< .mine
+//引入依赖
+const gulp=require('gulp');
+
+//引入path系统模块： 路径的处理
+const path=require('path');
+//引入编译less的插件模块
+const less=require('gulp-less');
+//引入压缩css的插件
+const cleanCSS=require('gulp-clean-css');
+
+
+//引入编译sass的模块
+var sass = require('gulp-sass');
+//设置sass的编译器为node-sass
+sass.compiler = require('node-sass');
+
+//引入压缩js的插件
+var uglify = require('gulp-uglify');
+//引入babel，把es6翻译为es5
+const babel = require('gulp-babel');
+
+//引入重命名的插件
+var rename = require("gulp-rename");
+
+//引入热刷新模块livereload
+let livereload = require('gulp-livereload');
+
+//引入压缩图片的插件
+const imagemin = require('gulp-imagemin');
+
+//引入删除文件的模块
+const del = require('del');
+
+//引入串行任务
+var runSequence = require('run-sequence');
+
+//less编译和压缩任务
+gulp.task("lessTask",function () {
+    //任务的配置细节
+    gulp.src("src/less/*.less") //源文件：*表示匹配所有的less文件
+        .pipe(less({
+            paths: [ path.join(__dirname, 'less', 'includes') ] //连接路径并规范路径
+        }))
+        .pipe(cleanCSS({compatibility: 'ie8'})) //执行压缩css，并且做ie8兼容的配置
+        .pipe(rename({
+            //dirname: "main/text/ciao", //目录名
+            //basename: "aloha", //文件名
+            //prefix: "bonjour-", //加前缀
+            suffix: ".min" //添后缀
+            //extname: ".md" //扩展名
+        })) //重命名: 在文件名称添加后缀.min
+        .pipe(gulp.dest("dist/css"))  //输出的目标
+        .pipe(livereload());  //使用热刷新
+});
+
+//配置sass任务
+gulp.task("sassTask",function () {
+    //任务的配置细节
+    gulp.src("src/sass/*.scss") //源文件：*表示匹配所有的less文件
+        .pipe(sass().on('error', sass.logError)) //编译sass
+        .pipe(cleanCSS({compatibility: 'ie8'})) //执行压缩css，并且做ie8兼容的配置
+        .pipe(rename({
+            //dirname: "main/text/ciao", //目录名
+            //basename: "aloha", //文件名
+            //prefix: "bonjour-", //加前缀
+            suffix: ".min" //添后缀
+            //extname: ".md" //扩展名
+        })) //重命名: 在文件名称添加后缀.min
+        .pipe(gulp.dest("dist/css"));  //输出的目标
+});
+
+//配置图片压缩任务
+gulp.task("jsMin",function () {
+    gulp.src('src/js/*')  //源文件js
+        .pipe(babel({
+            presets: ['@babel/env']
+        })) //把es6翻译为es5
+        .pipe(uglify()) //压缩js
+        .pipe(rename({
+            suffix: ".min" //添后缀.min
+        })) //重命名: 在文件名称添加后缀
+        .pipe(gulp.dest('dist/js')) //输出文件js
+});
+
+//配置图片压缩任务
+gulp.task("imgMin",function () {
+    gulp.src('src/images/*')  //源图片
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ])) //执行gif、jpeg、png、svg的压缩
+        .pipe(gulp.dest('dist/images')) //输出的图片
+});
+
+
+//配置清理垃圾文件和文件夹的任务
+gulp.task("delTask",function () {
+    del(['src/images/*', 'temp']).then(paths => {
+        console.log('垃圾文件清理成功！');
+    });
+});
+
+//定义: 开发时执行的任务
+gulp.task("default",function () {
+    //在观察者任务中开启监听
+    livereload.listen();
+    gulp.watch("src/less/*.less",["lessTask"]); //监视less的变化，自动执行less任务
+    gulp.watch("src/sass/*.scss",["sassTask"]); //监视sass的变化，自动执行sass任务
+    gulp.watch("src/js/*.js",["jsMin"]); //监视js的变化，自动执行js压缩任务
+});
+
+//定义： 发布时执行的任务
+gulp.task("publishTask" ,function () {
+    runSequence("imgMin","delTask");
+});=======
+//引入依赖
+const gulp=require('gulp');
+
+//引入path系统模块： 路径的处理
+const path=require('path');
+//引入编译less的插件模块
+const less=require('gulp-less');
+//引入压缩css的插件
+const cleanCSS=require('gulp-clean-css');
+
+
+//引入编译sass的模块
+var sass = require('gulp-sass');
+//设置sass的编译器为node-sass
+sass.compiler = require('node-sass');
+
+//引入压缩js的插件
+var uglify = require('gulp-uglify');
+//引入babel，把es6翻译为es5
+const babel = require('gulp-babel');
+
+//引入重命名的插件
+var rename = require("gulp-rename");
+
+//引入热刷新模块livereload
+let livereload = require('gulp-livereload');
+
+//引入压缩图片的插件
+const imagemin = require('gulp-imagemin');
+
+//引入删除文件的模块
+const del = require('del');
+
+//引入串行任务
+var runSequence = require('run-sequence');
+
+//less编译和压缩任务
+gulp.task("lessTask",function () {
+    //任务的配置细节
+    gulp.src("src/less/*.less") //源文件：*表示匹配所有的less文件
+        .pipe(less({
+            paths: [ path.join(__dirname, 'less', 'includes') ] //连接路径并规范路径
+        }))
+        .pipe(cleanCSS({compatibility: 'ie8'})) //执行压缩css，并且做ie8兼容的配置
+        .pipe(rename({
+            //dirname: "main/text/ciao", //目录名
+            //basename: "aloha", //文件名
+            //prefix: "bonjour-", //加前缀
+            suffix: ".min" //添后缀
+            //extname: ".md" //扩展名
+        })) //重命名: 在文件名称添加后缀.min
+        .pipe(gulp.dest("assets/css"))  //输出的目标
+        .pipe(livereload());  //使用热刷新
+});
+
+//配置sass任务
+gulp.task("sassTask",function () {
+    //任务的配置细节
+    gulp.src("src/sass/*.scss") //源文件：*表示匹配所有的less文件
+        .pipe(sass().on('error', sass.logError)) //编译sass
+        .pipe(cleanCSS({compatibility: 'ie8'})) //执行压缩css，并且做ie8兼容的配置
+        .pipe(rename({
+            //dirname: "main/text/ciao", //目录名
+            //basename: "aloha", //文件名
+            //prefix: "bonjour-", //加前缀
+            suffix: ".min" //添后缀
+            //extname: ".md" //扩展名
+        })) //重命名: 在文件名称添加后缀.min
+        .pipe(gulp.dest("assets/css"));  //输出的目标
+});
+
+//配置图片压缩任务
+gulp.task("jsMin",function () {
+    gulp.src('src/js/*')  //源文件js
+        .pipe(babel({
+            presets: ['@babel/env']
+        })) //把es6翻译为es5
+        .pipe(uglify()) //压缩js
+        .pipe(rename({
+            suffix: ".min" //添后缀.min
+        })) //重命名: 在文件名称添加后缀
+        .pipe(gulp.dest('assets/js')) //输出文件js
+});
+
+//配置图片压缩任务
+gulp.task("imgMin",function () {
+    gulp.src('src/images/*')  //源图片
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ])) //执行gif、jpeg、png、svg的压缩
+        .pipe(gulp.dest('assets/images')) //输出的图片
+});
+
+
+//配置清理垃圾文件和文件夹的任务
+gulp.task("delTask",function () {
+    del(['src/images/*', 'temp']).then(paths => {
+        console.log('垃圾文件清理成功！');
+    });
+});
+
+//定义: 开发时执行的任务
+gulp.task("devTask",function () {
+    //在观察者任务中开启监听
+    livereload.listen();
+    gulp.watch("src/less/*.less",["lessTask"]); //监视less的变化，自动执行less任务
+    gulp.watch("src/sass/*.scss",["sassTask"]); //监视sass的变化，自动执行sass任务
+    gulp.watch("src/js/*.js",["jsMin"]); //监视js的变化，自动执行js压缩任务
+});
+
+//定义： 发布时执行的任务
+gulp.task("publishTask" ,function () {
+    runSequence("imgMin","delTask");
+});>>>>>>> .r4

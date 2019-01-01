@@ -1,0 +1,67 @@
+// 头部
+// 顶部导航
+.navbar-inverse {
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+        .navbar-brand{
+            color:#fff;
+            font-size: 24px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            span{
+                margin-right:5px;
+                font-size: 18px;
+            }
+        }
+    .navbar-nav{
+        &> li {
+            .tooltip{
+                img{
+                    width:120px;
+                    height:120px;
+                }
+            }
+            &> a{
+                color:#fff;
+                &:hover{
+                         color: #00a8ff;
+                        text-decoration: underline;
+                }
+            }
+        }
+    } 
+        
+}
+// 主导航
+.navbar-default{
+    margin-bottom: 10px;
+    .navbar-brand{
+        img{
+            margin-top:10px;
+        }
+    }
+    .navbar-nav{
+        &> li {
+            &>a{
+                line-height:60px;
+                min-width: 80px;
+                }
+                &:hover{
+                    background: #f0f0f0;
+                     color: #00a8ff;
+                }
+        }
+    } 
+        
+}
+// 设置手机logo尺寸
+@media all and(max-width:414px){
+    .navbar-default{
+        .navbar-brand{
+            img{
+                margin-top:0px;
+                padding-top:10px;
+            }
+        }           
+    }
+}

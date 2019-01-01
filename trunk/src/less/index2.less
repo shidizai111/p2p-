@@ -1,0 +1,103 @@
+// 公共样式
+/* 浮动样式 */
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+/* 清除浮动 */
+.clear{
+    clear:both;
+}
+/* 清除固定结构浮动 */
+.clearfix::after{
+    content:"";
+    width:0;
+    height:0;
+    display:block;
+    clear:both;
+}
+// 文章列表
+#Articlelist{
+    margin-top:20px;
+    dl{
+        padding-left: 70px;
+        height: 76px;
+    }
+    .list01{
+        background: url(../../assets/images/feature01.png) no-repeat;
+    }
+    .list02{
+        background: url(../../assets/images/feature02.png) no-repeat;
+    }
+    .list03{
+        background: url(../../assets/images/feature03.png) no-repeat;
+    }
+}
+
+// 借款
+#borrow{
+        margin-bottom: 20px;
+        .title{
+            border-bottom:1px solid #e8e8e8;
+            a{
+                text-align: right;
+                padding-top:36px;
+                height:40px;
+            }
+            h1{
+                border-bottom: 3px solid #2e8ece;
+                margin:0px;
+                line-height: 60px;
+                width: 150px;
+                color: #2e8ece;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+        .table{
+            p{
+                font-size: 24px;
+            }
+        }
+}
+// 企业最新资讯
+#enterprise{
+    margin-bottom: 20px;
+    .title{
+        // border-bottom:1px solid #e8e8e8;
+        a{
+            text-align: right;
+            padding-top:36px;
+            height:40px;
+        }
+        h1{
+            border-bottom: 3px solid #2e8ece;
+            margin:0px;
+            line-height: 60px;
+            width: 150px;
+            color: #2e8ece;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+    .table{
+        tr{
+            td{
+                a{
+                    width: 100%;
+                    color: #555;
+                    &:hover{
+                        color:#2e8ece;
+                    }
+                }
+            }
+        }
+        .btn{
+            color: #fff;
+            background-color: #d9534f;
+            border-color: #d43f3a;
+        }
+    }
+}

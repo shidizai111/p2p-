@@ -1,0 +1,62 @@
+.navbar-default{
+    height: 80px;
+    .navbar-header{
+        a{
+            img{
+                margin-top:4px;
+            }
+        }
+    }
+}
+
+#login{
+    canvas{
+        // margin-top:10px;
+        cursor: pointer;
+    }
+    .panel-default{
+        .panel-body{
+            .form-horizontal{
+                h4{
+                    margin-left: 122px;
+                    color: #999;
+                    margin-bottom: 20px;
+                    margin-top:14px;
+                }
+                // margin:0 auto;
+                // width: 600px;
+                .form-group{
+                    input{
+                        // width: 220px;
+                    }
+                    .col-sm-offset-2{
+                        // padding-left: 75px;
+                        .btn{
+                            width: 100px;
+                            margin-right: 26px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#myModal{
+    .modal-body{
+        #num{
+            color: #0cf581;
+            font-size:22px;
+        }
+        .glyphicon-ok{
+            font-size:24px;
+            color: #737373;
+        }
+    }
+}
+@media all and(min-width:800px){
+    .form-horizontal{
+        width: 50%;
+        margin: auto;
+    }
+}

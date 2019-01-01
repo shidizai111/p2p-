@@ -1,0 +1,54 @@
+/* 共用样式 */
+/* 版心样式 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont.woff') format('woff'),
+    url('../fonts/iconfont.ttf') format('truetype'),
+    url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.container{
+    width:1200px;
+    margin:0 auto;
+}
+/* 浮动样式 */
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+/* 清除浮动 */
+.clear{
+    clear:both;
+}
+/* 清除固定结构浮动 */
+.clearfix::after{
+    content:"";
+    width:0;
+    height:0;
+    display:block;
+    clear:both;
+}
+/* a标签样式 */
+a{
+    /* 清除a标签下划线 */
+    text-decoration:none;
+}
+a:hover{
+    /* 清除鼠标hover上去时候的下划线 */
+    text-decoration:none;
+}
+input{
+    outline:none;
+}
+/* 以上是共用样式 */

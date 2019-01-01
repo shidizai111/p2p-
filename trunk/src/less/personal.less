@@ -1,0 +1,79 @@
+// 公共样式
+/* 浮动样式 */
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+/* 清除浮动 */
+.clear{
+    clear:both;
+}
+/* 清除固定结构浮动 */
+.clearfix::after{
+    content:"";
+    width:0;
+    height:0;
+    display:block;
+    clear:both;
+}
+#personal{
+    // 右边
+    .personalr{
+        margin-bottom: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding:15px;
+        .user{
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 16px;
+            .imgs{
+                margin-right: 20px;
+                width: 94px;
+                height: 94px;
+                border: 1px solid #ddd;
+                padding: 10px;
+                img{
+                    width: 72px;
+                    height: 72px;
+                }
+            }
+            .username{
+                padding-top:5px;
+                font-size: 14px;
+            }
+        }
+        .money{
+            margin: 10px 2px;
+            font-size: 18px;
+            p{
+                span{
+                    color:#337ab7;
+                }
+            }
+        }
+        .btnset{
+            text-align: center;
+            width: 400px;
+            margin: 30px auto 0px auto;
+            .btn{
+                width: 106px;
+                height: 46px;
+                text-align: center;
+                font-size:18px;
+            }
+        }
+        .icons{
+            .autonym{
+                padding-top:40px;
+                padding-left: 40px;
+            }
+        }
+        .autonym{
+            padding-top:40px;
+            padding-left: 40px;
+        }
+    }
+}
